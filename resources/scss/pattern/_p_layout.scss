@@ -1,0 +1,190 @@
+/* 기본적인 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* 헤더 스타일 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #c1b6f2;
+    color: white;
+
+    .logo img {
+        height: 40px;
+    }
+
+    .nav {
+        display: flex;
+        gap: 20px;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    .button {
+        background-color: #ff8a3a;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: #8684d6;
+        text-decoration: none;
+    }
+}
+.swiper-container {
+    width: 100%;
+    height: 100vh; /* 화면 높이를 100% 사용 */
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f2f2f2; /* Slide 배경색 (기본 회색) */
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 이미지가 슬라이드 공간을 꽉 채우도록 */
+        }
+    }
+    /* 햄버거 메뉴 버튼 */
+    .menu-toggle {
+        display: none;
+        background-color: transparent;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .footer {
+        background-color: #000;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 14px;
+
+                &:hover {
+                    color: #007aff;
+                }
+            }
+        }
+
+        /* Navigation buttons styling */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: white; /* 버튼 색상을 흰색으로 설정 */
+            font-size: 2rem; /* 버튼 크기 */
+        }
+
+        /* Pagination styling */
+        .swiper-pagination-bullet {
+            background-color: white; /* 페이지네이션 색상 */
+        }
+    }
+
+    .s-patch-section {
+        background-color: #000; /* Background color of the section */
+        color: white; /* Text color */
+        padding: 40px; /* Padding around the section */
+        text-align: center;
+
+        h2 {
+            font-size: 2.5rem; /* Section title size */
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem; /* Subtitle size */
+            margin-bottom: 40px;
+        }
+
+        .s-patch-item {
+            display: flex; /* Flexbox layout for image and text */
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px; /* Space between each item */
+
+            &:nth-child(odd) {
+                flex-direction: row-reverse; /* Reverse order for alternate items */
+            }
+
+            .s-patch-text {
+                flex: 1;
+                padding: 20px;
+
+                .category {
+                    display: inline-block;
+                    background-color: #555;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-size: 0.9rem;
+                    margin-bottom: 10px;
+                }
+
+                h3 {
+                    font-size: 1.8rem;
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                }
+
+                p {
+                    font-size: 1rem;
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    color: #007aff;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+
+            .s-patch-image {
+                flex: 1;
+                img {
+                    max-width: 100%;
+                    border-radius: 15px; /* Optional styling for image rounding */
+                }
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .s-patch-item {
+                flex-direction: column;
+
+                .s-patch-image {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .footer-text {
+        font-size: 12px;
+    }
+}
