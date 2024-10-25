@@ -582,7 +582,7 @@ body {
 
 /* 헤더 스타일 */
 .header {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -889,4 +889,8 @@ body {
 }
 .slide-studio .swiper-pagination {
   bottom: -50px;
+}
+
+.swiper.swiper-intro img {
+  height: 70vh;
 }/*# sourceMappingURL=style.css.map */

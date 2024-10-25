@@ -164,3 +164,11 @@
         bottom: -50px;
     }
 }
+
+.swiper {
+    &.swiper-intro {
+        img {
+            height: 70vh;
+        }
+    }
+}
